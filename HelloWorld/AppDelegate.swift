@@ -19,10 +19,22 @@ class AppDelegate: UIResponder {
 
 // MARK: - UIApplicationDelegate
 
-extension AppDelegate {
+extension AppDelegate: UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        /// Create the window sized to the device's screen
+        let frame = UIScreen.main.bounds
+        let window = UIWindow(frame: frame)
+        
+        /// Set the root view controller of the window.
+        /// This is what is initially displayed by your application.
+        window.rootViewController = HelloWorldViewController()
+        
+        /// Make the window visible to the user.
+        window.makeKeyAndVisible()
+        
+        self.window = window
+        
         return true
     }
     
