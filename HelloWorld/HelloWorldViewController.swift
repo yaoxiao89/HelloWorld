@@ -25,6 +25,7 @@ extension HelloWorldViewController {
     }
     
     private func setupLabel() {
+        /// 1.
         /// Create a label with the text "Hello World!"
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -32,6 +33,7 @@ extension HelloWorldViewController {
         label.font = .preferredFont(forTextStyle: .largeTitle)
         label.text = "Hello World!"
         
+        /// 2.
         /// Pin the label to the safe area of the view
         view.addSubview(label)
         let guide = view.safeAreaLayoutGuide
